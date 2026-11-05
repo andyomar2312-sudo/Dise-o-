@@ -259,3 +259,51 @@ color: #B3B3B3;
 .fondo-barra-progreso:hover .relleno-barra-progreso {
     background-color: var(--second-color);
 }
+
+
+@media (max-width: 480px) {
+    body { padding-bottom: 170px; }          
+
+    #buscar { display: flex; gap: 8px; padding: 0 16px; }
+    #buscar > input { flex: 1; min-width: 0; padding: 10px 14px; }
+    #buscar > button { padding: 10px 14px; }
+
+    .album-card { flex: 0 0 110px; }
+    .album-card img { width: 110px; height: 110px; }
+
+    .imagen-A img { width: 240px; height: 240px; }
+    .barra img { width: 240px; height: auto; }
+
+    .solo-escritorio { display: none; }         
+    .controles-reproduccion { justify-content: center; }
+}
+
+
+@media (min-width: 1024px) {
+    body { padding-bottom: 120px; }
+
+    .Seccion-m { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+    #buscar { display: flex; justify-content: center; margin-bottom: 32px; }
+    #buscar > input { width: 480px; }
+
+    .album-card { flex-basis: 150px; }
+    .album-card img { width: 150px; height: 150px; }
+
+    .imagen-A img { width: 380px; height: 380px; }
+    .barra img { width: 420px; }
+
+    .solo-escritorio { display: flex; }
+
+    .barra-reproductor {
+        display: grid;
+        grid-template-columns: 1fr minmax(380px, 2fr) 1fr;   
+        align-items: center;
+        gap: 24px;
+        padding: 14px 32px;
+    }
+    .mini-portada { width: 56px; height: 56px; }
+    .contenedor-controles { flex-direction: column; max-width: 620px; margin: 0 auto; }
+    .controles-reproduccion { justify-content: center; }
+    .controles-adicionales { align-items: center; justify-content: flex-end; gap: 8px; }
+}
