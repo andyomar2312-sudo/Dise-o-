@@ -8,6 +8,9 @@
     --succes-color:#42D6A4;
     --Info-color:#A607ED;
 }
+body{
+    background-color: var(--tertary-color);
+}
 #navar{
     justify-content: center;
 }
@@ -15,6 +18,8 @@
     display: block;
     margin-left: auto;
     margin-top: -85px;
+    border: none;
+    background-color: var(--tertary-color);
 }
 #buscar > input{
     padding: 10px 55px;
@@ -31,4 +36,67 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+}
+.carrusel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    overflow-x: auto;
+    background-color: var(--primary-color);
+
+}
+.carrusel-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    width: max-content;
+}
+.album-container {
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+}
+.album-card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 150px;
+    align-items: center;
+    justify-content: center;
+}
+.albun-card img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.imagen-A{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+}
+.imagen-A img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.barra{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.barra img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 100px;
+    margin-top: 30px;
 }
