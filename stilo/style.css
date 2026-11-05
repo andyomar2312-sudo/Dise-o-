@@ -100,3 +100,162 @@ body{
     height: 100px;
     margin-top: 30px;
 }
+
+.barra-reproductor {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    border-top: 1px solid var(255, 255, 255, 0.2);
+    padding: 16px;
+    gap: 10px;
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.3);
+}
+.info-pista {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+.mini-portada {
+    width: 40px;
+    height: 40px;
+    background-color: var(--black);
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+.detalles-pista {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.titulo-pista {
+    font-size: 0.85rem;
+    font-weight: 600;
+    /* color: var(--white); */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.artista-pista {
+    font-size: 0.75rem;
+    /* color: var(--color-texto-secundario); */
+color: #B3B3B3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.contenedor-controles {
+    display: flex;
+    flex-direction: column-reverse; /* En móvil: barra arriba, botones abajo */
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.controles-reproduccion {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 24px;
+    width: 100%;
+}
+.icono-control {
+    background: none;
+    border: none;
+    /* color: var(--color-texto-secundario); */
+color: #B3B3B3;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 8px;
+    /* transition: color 0.2s ease, transform 0.1s ease; */
+}
+
+/* .icono-control svg {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+} */
+
+.icono-control:hover {
+    /* color: var(--color-blanco); */
+    color: white;
+}
+
+/* .icono-control:active {
+    transform: scale(0.9);
+} */
+
+.boton-reproducir-principal {
+    background-color: white;
+    color: black;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+/* .boton-reproducir-principal svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+} */
+
+.boton-reproducir-principal:hover {
+    transform: scale(1.05);
+    /* background-color: var(--color-secundario); */
+    /* color: var(--color-blanco); */
+}
+
+.contenedor-progreso {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.marca-tiempo {
+    font-size: 0.7rem;
+    /* color: var(--color-texto-secundario); */
+    min-width: 35px;
+    /* text-align: center; */
+}
+.fondo-barra-progreso {
+    flex: 1;
+    height: 4px;
+    /* background-color: var(--color-fondo-deslizador); */
+
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+    /* transition: height 0.2s ease; */
+}
+
+/* .fondo-barra-progreso:hover {
+    height: 6px;
+} */
+
+.relleno-barra-progreso {
+    width: 40%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+    /* position: relative; */
+    /* transition: background-color 0.2s ease; */
+}
+
+.fondo-barra-progreso:hover .relleno-barra-progreso {
+    background-color: var(--second-color);
+}
